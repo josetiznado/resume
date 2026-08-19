@@ -108,10 +108,32 @@
         padding: 0.35rem 0.7rem;
         font-size: 0.95rem;
       }
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 0.9rem;
+        margin-top: 0.75rem;
+      }
+      .skill-category {
+        background: rgba(29, 78, 216, 0.03);
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 0.85rem;
+      }
+      .category-title {
+        font-weight: 700;
+        color: var(--accent);
+        margin-bottom: 0.5rem;
+        font-size: 0.95rem;
+      }
+      .skill-list { display: flex; flex-wrap: wrap; gap: 0.5rem; }
       a { color: var(--accent); }
       @media (max-width: 640px) {
         main { padding: 24px 18px; }
         .job-header { display: block; }
+        .skills-grid { grid-template-columns: 1fr; }
+        .skill { font-size: 0.92rem; padding: 0.32rem 0.6rem; }
+        .skill-category { padding: 0.65rem; border-radius: 8px; }
       }
     </style>
   </head>
@@ -135,13 +157,12 @@
             <div><span class="company">Cardiff</span> - Remote</div>
             <div class="date">Aug 2018 – Present</div>
           </div>
-          <div class="role">Remote PHP Developer / Full-Stack Developer</div>
+          <div class="role">Remote Full-Stack &amp; Cloud Developer</div>
           <ul>
-            <li>Use AI coding agents to accelerate implementation, debugging, and code generation for business systems and frontend work</li>
-            <li>Develop and maintain frontend interfaces and business tools using modern web practices</li>
-            <li>Create Python-based services and integrations for API to support internal processes and automation</li>
-            <li>Build and maintain Node.js backend services in AWS environments for APIs, integrations, and cloud-hosted solutions</li>
-            <li>Support Salesforce business needs through flows, Apex code, objects, permissions, page layouts, and custom configuration</li>
+            <li>Engineered dynamic web applications, application forms, and real-time internal reporting dashboards using Vue.js and React, optimizing user onboarding and data collection workflows.</li>
+            <li>Containerized and deployed Node.js and Python microservices on AWS ECS, establishing secure backend pipelines that automate data ingestion into core databases and leverage AWS S3 for reliable asset storage.</li>
+            <li>Engineered custom Apex REST APIs and batch integration pipelines to seamlessly synchronize Salesforce CRM data with internal Node.js and Python microservices, establishing real-time bi-directional data flow.</li>
+            <li>Integrated AI-driven coding tools into daily workflows to streamline feature prototyping, refactor complex API integration logic, and reduce debugging cycles across cloud-backed systems.</li>
           </ul>
         </article>
 
@@ -205,40 +226,75 @@
 
       <section>
         <h2 class="section-title">Technical Skills</h2>
-        <div class="skills">
-          <span class="skill">AI Agents</span>
-          <span class="skill">Frontend Development</span>
-          <span class="skill">Python</span>
-          <span class="skill">Node.js</span>
-          <span class="skill">AWS</span>
-          <span class="skill">Salesforce</span>
-          <span class="skill">Apex</span>
-          <span class="skill">Flow</span>
-          <span class="skill">Salesforce Objects</span>
-          <span class="skill">Permissions</span>
-          <span class="skill">Page Layouts</span>
-          <span class="skill">PHP</span>
-          <span class="skill">CodeIgniter</span>
-          <span class="skill">REST</span>
-          <span class="skill">JSON</span>
-          <span class="skill">XML</span>
-          <span class="skill">JavaScript</span>
-          <span class="skill">ReactJS</span>
-          <span class="skill">jQuery</span>
-          <span class="skill">Bootstrap</span>
-          <span class="skill">MySQL</span>
-          <span class="skill">CentOS</span>
-          <span class="skill">Apache</span>
-          <span class="skill">Git</span>
-          <span class="skill">GitLab</span>
-          <span class="skill">Bitbucket</span>
-          <span class="skill">FreeSWITCH</span>
-          <span class="skill">Twilio</span>
-          <span class="skill">Asterisk</span>
-          <span class="skill">DigitalOcean</span>
-          <span class="skill">Vultr</span>
-          <span class="skill">Scrum</span>
-          <span class="skill">Product Owner</span>
+        <div class="skills-grid" role="list">
+          <div class="skill-category" role="listitem" aria-label="Languages and Frameworks">
+            <div class="category-title">Languages &amp; Frameworks</div>
+            <div class="skill-list">
+              <span class="skill">Node.js</span>
+              <span class="skill">Python</span>
+              <span class="skill">JavaScript</span>
+              <span class="skill">Vue.js</span>
+              <span class="skill">React</span>
+              <span class="skill">PHP</span>
+              <span class="skill">CodeIgniter</span>
+              <span class="skill">HTML5/CSS3</span>
+            </div>
+          </div>
+
+          <div class="skill-category" role="listitem" aria-label="Cloud and DevOps">
+            <div class="category-title">Cloud &amp; DevOps</div>
+            <div class="skill-list">
+              <span class="skill">AWS (ECS, S3)</span>
+              <span class="skill">Linux (CentOS)</span>
+              <span class="skill">Apache</span>
+              <span class="skill">Docker</span>
+              <span class="skill">Git</span>
+              <span class="skill">GitLab</span>
+              <span class="skill">Bitbucket</span>
+            </div>
+          </div>
+
+          <div class="skill-category" role="listitem" aria-label="Salesforce platform skills">
+            <div class="category-title">Salesforce Platform</div>
+            <div class="skill-list">
+              <span class="skill">Apex</span>
+              <span class="skill">Custom REST APIs</span>
+              <span class="skill">Flows</span>
+              <span class="skill">Custom Objects</span>
+              <span class="skill">Permissions &amp; Security</span>
+              <span class="skill">Page Layouts</span>
+            </div>
+          </div>
+
+          <div class="skill-category" role="listitem" aria-label="Databases and Protocols">
+            <div class="category-title">Databases &amp; Protocols</div>
+            <div class="skill-list">
+              <span class="skill">MySQL</span>
+              <span class="skill">REST APIs</span>
+              <span class="skill">JSON</span>
+              <span class="skill">XML</span>
+              <span class="skill">WebSockets</span>
+            </div>
+          </div>
+
+          <div class="skill-category" role="listitem" aria-label="VoIP and Telecom">
+            <div class="category-title">VoIP &amp; Telecom</div>
+            <div class="skill-list">
+              <span class="skill">FreeSWITCH</span>
+              <span class="skill">Twilio</span>
+              <span class="skill">Asterisk</span>
+              <span class="skill">Vicidial</span>
+            </div>
+          </div>
+
+          <div class="skill-category" role="listitem" aria-label="AI and methodologies">
+            <div class="category-title">AI &amp; Methodologies</div>
+            <div class="skill-list">
+              <span class="skill">AI Coding Agents</span>
+              <span class="skill">Software Architecture</span>
+              <span class="skill">Agile/Scrum</span>
+            </div>
+          </div>
         </div>
       </section>
 
