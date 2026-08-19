@@ -1,2 +1,7 @@
-/resume josetiznado - normal.docx
-/resume.md
+# Binary / Office documents
+*.docx
+*.doc
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
