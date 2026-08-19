@@ -8,6 +8,36 @@
       name="description"
       content="Resume of Jose Tiznado, a Senior Software Engineer with 14+ years of experience architecting full-stack web applications, cloud microservices on AWS, CRM integrations, and telephony systems."
     />
+    <link rel="canonical" href="https://josetiznado.github.io/resume/" />
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Jose Tiznado | Senior Software Engineer &amp; Full-Stack Cloud Developer" />
+    <meta
+      property="og:description"
+      content="Resume of Jose Tiznado — 14+ years of experience architecting full-stack web applications, AWS microservices, CRM integrations, and telephony systems."
+    />
+    <meta property="og:url" content="https://josetiznado.github.io/resume/" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@JETiznado" />
+    <meta name="twitter:creator" content="@JETiznado" />
+    <meta name="twitter:title" content="Jose Tiznado | Senior Software Engineer &amp; Full-Stack Cloud Developer" />
+    <meta
+      name="twitter:description"
+      content="Resume of Jose Tiznado — 14+ years of experience architecting full-stack web applications, AWS microservices, CRM integrations, and telephony systems."
+    />
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -15,283 +45,672 @@
         "name": "Jose Tiznado",
         "jobTitle": "Senior Software Engineer",
         "description": "Senior Software Engineer with 14+ years of experience building business systems, CRM integrations, AWS microservices, and telephony solutions.",
-        "url": "https://github.com/josetiznado/",
+        "url": "https://josetiznado.github.io/resume/",
         "sameAs": [
           "https://github.com/josetiznado/",
-          "https://www.linkedin.com/in/josetiznado/"
+          "https://www.linkedin.com/in/josetiznado/",
+          "https://www.credly.com/users/jose-tiznado.cfe8d75f",
+          "https://x.com/JETiznado"
         ]
       }
     </script>
+
     <style>
       :root {
-        --bg: #f5f7fb;
+        --bg: #f8fafc;
         --card: #ffffff;
-        --text: #1f2937;
-        --muted: #4b5563;
-        --line: #e5e7eb;
-        --accent: #1d4ed8;
+        --card-border: #e2e8f0;
+        --text: #0f172a;
+        --text-secondary: #334155;
+        --muted: #64748b;
+        --line: #e2e8f0;
+        --accent: #2563eb;
+        --accent-hover: #1d4ed8;
+        --accent-bg: #eff6ff;
+        --badge-bg: #f1f5f9;
+        --badge-border: #e2e8f0;
+        --badge-text: #1e293b;
+        --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
       }
-      * { box-sizing: border-box; }
+
+      [data-theme="dark"] {
+        --bg: #0b0f19;
+        --card: #111827;
+        --card-border: #1f2937;
+        --text: #f9fafb;
+        --text-secondary: #cbd5e1;
+        --muted: #94a3b8;
+        --line: #1f2937;
+        --accent: #3b82f6;
+        --accent-hover: #60a5fa;
+        --accent-bg: rgba(59, 130, 246, 0.12);
+        --badge-bg: #1e293b;
+        --badge-border: #334155;
+        --badge-text: #e2e8f0;
+        --shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.4);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) {
+          --bg: #0b0f19;
+          --card: #111827;
+          --card-border: #1f2937;
+          --text: #f9fafb;
+          --text-secondary: #cbd5e1;
+          --muted: #94a3b8;
+          --line: #1f2937;
+          --accent: #3b82f6;
+          --accent-hover: #60a5fa;
+          --accent-bg: rgba(59, 130, 246, 0.12);
+          --badge-bg: #1e293b;
+          --badge-border: #334155;
+          --badge-text: #e2e8f0;
+          --shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.4);
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
       body {
         margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         background: var(--bg);
         color: var(--text);
         line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        transition: background-color 0.2s ease, color 0.2s ease;
       }
-      main {
-        max-width: 900px;
+
+      .container {
+        max-width: 880px;
         margin: 40px auto;
+        padding: 0 16px;
+      }
+
+      main {
         background: var(--card);
-        border: 1px solid var(--line);
-        border-radius: 12px;
-        padding: 40px 32px;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+        border: 1px solid var(--card-border);
+        border-radius: 16px;
+        padding: 48px 40px;
+        box-shadow: var(--shadow);
       }
-      h1, h2, h3 { margin: 0 0 0.5rem; }
+
+      /* Actions Bar (Theme toggle & Print) */
+      .top-actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        margin-bottom: 24px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: var(--card);
+        color: var(--text-secondary);
+        border: 1px solid var(--card-border);
+        padding: 8px 14px;
+        border-radius: 8px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        text-decoration: none;
+      }
+
+      .btn:hover {
+        background: var(--accent-bg);
+        color: var(--accent);
+        border-color: var(--accent);
+      }
+
+      .btn svg {
+        width: 16px;
+        height: 16px;
+        fill: currentColor;
+      }
+
+      /* Header Profile */
+      header {
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 24px;
+        margin-bottom: 28px;
+      }
+
+      .header-title-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
       h1 {
-        font-size: 2.2rem;
-        margin-bottom: 0.5rem;
+        font-size: 2.25rem;
+        font-weight: 800;
+        letter-spacing: -0.025em;
+        margin: 0;
+        color: var(--text);
       }
+
+      .subtitle {
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: var(--accent);
+        margin: 4px 0 16px;
+      }
+
+      .contact-bar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 18px;
+      }
+
+      .contact-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: var(--badge-bg);
+        border: 1px solid var(--badge-border);
+        color: var(--badge-text);
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+
+      .contact-pill:hover {
+        background: var(--accent-bg);
+        border-color: var(--accent);
+        color: var(--accent);
+        transform: translateY(-1px);
+      }
+
+      .contact-pill svg {
+        width: 14px;
+        height: 14px;
+        fill: currentColor;
+      }
+
       .summary {
-        font-size: 1.02rem;
-        color: var(--muted);
-        margin-bottom: 2rem;
+        font-size: 0.975rem;
+        color: var(--text-secondary);
+        line-height: 1.65;
+        margin: 0;
       }
-      section { margin-top: 2rem; }
+
+      /* Section Styling */
+      section {
+        margin-top: 32px;
+      }
+
       .section-title {
-        font-size: 1.05rem;
+        font-size: 0.95rem;
         font-weight: 700;
-        letter-spacing: 0.05em;
+        letter-spacing: 0.08em;
         text-transform: uppercase;
         color: var(--accent);
         border-bottom: 2px solid var(--line);
-        padding-bottom: 0.5rem;
-        margin-bottom: 1rem;
+        padding-bottom: 6px;
+        margin: 0 0 20px;
       }
+
+      /* Experience Articles */
       .job {
-        margin-bottom: 1.5rem;
+        margin-bottom: 26px;
       }
+
+      .job:last-child {
+        margin-bottom: 0;
+      }
+
       .job-header {
         display: flex;
         justify-content: space-between;
-        gap: 1rem;
+        align-items: baseline;
+        gap: 12px;
         flex-wrap: wrap;
-        margin-bottom: 0.2rem;
+        margin-bottom: 4px;
       }
+
       .company {
+        font-size: 1.1rem;
         font-weight: 700;
+        color: var(--text);
       }
+
       .role {
+        font-size: 0.95rem;
         font-weight: 600;
+        color: var(--accent);
+        margin-bottom: 6px;
       }
+
       .date {
         color: var(--muted);
-        font-style: italic;
+        font-size: 0.875rem;
+        font-weight: 500;
       }
+
       ul {
-        margin: 0.5rem 0 0 1.2rem;
+        margin: 8px 0 0 20px;
         padding: 0;
       }
-      li { margin-bottom: 0.35rem; }
-      .skills {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.55rem;
-        margin-top: 0.75rem;
+
+      li {
+        margin-bottom: 6px;
+        color: var(--text-secondary);
+        font-size: 0.925rem;
+        line-height: 1.55;
       }
-      .skill {
-        background: #eef2ff;
-        border: 1px solid #dbeafe;
-        color: #1e3a8a;
-        border-radius: 999px;
-        padding: 0.35rem 0.7rem;
-        font-size: 0.95rem;
+
+      li strong {
+        color: var(--text);
+        font-weight: 600;
       }
+
+      /* Technical Skills Grid */
       .skills-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        gap: 0.9rem;
-        margin-top: 0.75rem;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 14px;
       }
+
       .skill-category {
-        background: rgba(29, 78, 216, 0.03);
-        border: 1px solid var(--line);
-        border-radius: 10px;
-        padding: 0.85rem;
+        background: var(--badge-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 12px;
+        padding: 14px;
+        transition: transform 0.2s ease, border-color 0.2s ease;
       }
+
+      .skill-category:hover {
+        border-color: var(--accent);
+      }
+
       .category-title {
         font-weight: 700;
         color: var(--accent);
-        margin-bottom: 0.5rem;
+        margin-bottom: 10px;
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+
+      .skill-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .skill {
+        background: var(--card);
+        border: 1px solid var(--badge-border);
+        color: var(--badge-text);
+        border-radius: 6px;
+        padding: 3px 8px;
+        font-size: 0.825rem;
+        font-weight: 500;
+      }
+
+      /* Education & Links */
+      .education-item {
+        color: var(--text-secondary);
         font-size: 0.95rem;
       }
-      .skill-list { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-      a { color: var(--accent); }
+
+      .education-item strong {
+        color: var(--text);
+      }
+
+      /* Print Stylesheet */
+      @media print {
+        body {
+          background: #ffffff !important;
+          color: #000000 !important;
+          font-size: 11pt;
+        }
+
+        .container {
+          max-width: 100% !important;
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+
+        main {
+          box-shadow: none !important;
+          border: none !important;
+          padding: 0 !important;
+        }
+
+        .top-actions {
+          display: none !important;
+        }
+
+        .contact-pill {
+          border: 1px solid #ccc !important;
+          background: #fff !important;
+          color: #000 !important;
+          padding: 2px 8px !important;
+        }
+
+        .section-title {
+          color: #000 !important;
+          border-bottom: 1.5px solid #333 !important;
+          margin-top: 16px !important;
+        }
+
+        .role, .subtitle, .category-title {
+          color: #1a1a1a !important;
+        }
+
+        .skill-category {
+          background: #fff !important;
+          border: 1px solid #ddd !important;
+          break-inside: avoid;
+        }
+
+        .skill {
+          background: #fff !important;
+          border: 1px solid #ccc !important;
+          color: #000 !important;
+        }
+
+        .job {
+          break-inside: avoid;
+          page-break-inside: avoid;
+        }
+
+        a {
+          text-decoration: none !important;
+          color: #000 !important;
+        }
+      }
+
       @media (max-width: 640px) {
-        main { padding: 24px 18px; }
-        .job-header { display: block; }
-        .skills-grid { grid-template-columns: 1fr; }
-        .skill { font-size: 0.92rem; padding: 0.32rem 0.6rem; }
-        .skill-category { padding: 0.65rem; border-radius: 8px; }
+        main {
+          padding: 28px 20px;
+        }
+        h1 {
+          font-size: 1.85rem;
+        }
+        .job-header {
+          flex-direction: column;
+          gap: 2px;
+        }
+        .skills-grid {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
   </head>
   <body>
-    <main>
-      <header>
-        <h1>Jose Tiznado</h1>
-        <p class="summary">
-          Versatile Senior Software Engineer with 14+ years of experience architecting full-stack web applications, cloud microservices, CRM integrations, and telephony systems. Proven track record leading engineering initiatives, deploying containerized Node.js and Python services on AWS, and integrating enterprise ecosystems (Salesforce, Vicidial, custom REST APIs). Passionate about leveraging modern AI-assisted engineering workflows to build scalable, business-critical software solutions.
-        </p>
-      </header>
+    <div class="container">
+      <div class="top-actions" role="toolbar" aria-label="Page Actions">
+        <button class="btn" id="themeToggle" aria-label="Toggle dark/light mode">
+          <svg id="themeIcon" viewBox="0 0 24 24">
+            <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/>
+          </svg>
+          <span id="themeText">Theme</span>
+        </button>
+        <button class="btn" onclick="window.print()" aria-label="Print or save as PDF">
+          <svg viewBox="0 0 24 24">
+            <path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z"/>
+          </svg>
+          Print / PDF
+        </button>
+      </div>
 
-      <section>
-        <h2 class="section-title">Professional Experience</h2>
-
-        <article class="job">
-          <div class="job-header">
-            <div><span class="company">Cardiff</span> - Remote</div>
-            <div class="date">Aug 2018 – Present</div>
+      <main>
+        <header>
+          <div class="header-title-row">
+            <h1>Jose Tiznado</h1>
           </div>
-          <div class="role">Remote Full-Stack &amp; Cloud Developer</div>
-          <ul>
-            <li><strong>Internal Tools &amp; Dashboards:</strong> Engineered dynamic web applications, interactive onboarding forms, and real-time reporting dashboards using React and Vue.js, optimizing user workflows and accelerating data processing.</li>
-            <li><strong>Cloud Microservices &amp; Pipelines:</strong> Containerized and deployed Node.js and Python microservices on AWS ECS with Amazon S3 integration, establishing secure automated ETL data ingestion pipelines.</li>
-            <li><strong>Salesforce &amp; CRM Integration:</strong> Architected custom Apex REST APIs and bi-directional synchronization pipelines connecting Salesforce CRM data seamlessly with internal microservices in real time.</li>
-            <li><strong>AI &amp; Modern Tooling:</strong> Integrated AI-assisted coding tools and modern engineering practices into daily workflows to streamline feature prototyping, optimize complex integrations, and accelerate debugging cycles.</li>
-          </ul>
-        </article>
+          <div class="subtitle">Senior Software Engineer &amp; Full-Stack Cloud Developer</div>
 
-        <article class="job">
-          <div class="job-header">
-            <div><span class="company">ABC Aida</span> – Tijuana, BC, MX</div>
-            <div class="date">Jan 2015 – Dec 2017</div>
+          <div class="contact-bar" role="list" aria-label="Contact and Social Links">
+            <a class="contact-pill" href="https://github.com/josetiznado/" target="_blank" rel="noopener noreferrer" role="listitem">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+              github.com/josetiznado
+            </a>
+            <a class="contact-pill" href="https://www.linkedin.com/in/josetiznado/" target="_blank" rel="noopener noreferrer" role="listitem">
+              <svg viewBox="0 0 24 24">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+              </svg>
+              linkedin.com/in/josetiznado
+            </a>
+            <a class="contact-pill" href="https://www.credly.com/users/jose-tiznado.cfe8d75f" target="_blank" rel="noopener noreferrer" role="listitem">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+              </svg>
+              Credly Badges
+            </a>
+            <a class="contact-pill" href="https://x.com/JETiznado" target="_blank" rel="noopener noreferrer" role="listitem">
+              <svg viewBox="0 0 24 24">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+              @JETiznado
+            </a>
+            <span class="contact-pill" role="listitem">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+              Remote / US Timezones
+            </span>
           </div>
-          <div class="role">Engineering Manager</div>
-          <ul>
-            <li><strong>Engineering Leadership:</strong> Led the engineering and IT staff in architecting, developing, and deploying cloud-hosted business applications, establishing coding standards and GitLab code review processes.</li>
-            <li><strong>Telephony &amp; CRM Integration:</strong> Architected full-stack CRM and telecommunications solutions, integrating Vicidial with custom CRM platforms, webphone capabilities, and automated marketing workflows.</li>
-            <li><strong>Cloud Infrastructure &amp; Reliability:</strong> Configured, secured, and maintained Linux (CentOS/LAMP) cloud servers, implementing deployment automation and robust disaster recovery strategies.</li>
-            <li><strong>Stakeholder Collaboration:</strong> Partnered directly with executive leadership to evaluate system requirements, plan architectural roadmaps, and implement emerging technologies.</li>
-          </ul>
-        </article>
 
-        <article class="job">
-          <div class="job-header">
-            <div><span class="company">IE Soluciones</span> – Culiacan, Sin, MX</div>
-            <div class="date">Dec 2012 – Dec 2014</div>
-          </div>
-          <div class="role">IT Coordinator</div>
-          <ul>
-            <li><strong>Agile Project Delivery:</strong> Served as Scrum Master directing agile development cycles, translating client requirements into technical specifications, accurate project estimates, and milestone deliveries.</li>
-            <li><strong>Team Supervision &amp; Quality:</strong> Supervised engineering teams across multi-client software projects, enforcing code quality via repository reviews and ensuring timely delivery.</li>
-            <li><strong>Systems Deployment:</strong> Deployed and maintained cloud server environments (CentOS/LAMP) supporting scalable client web applications.</li>
-          </ul>
-        </article>
+          <p class="summary">
+            Versatile Senior Software Engineer with 14+ years of experience architecting full-stack web applications, cloud microservices, CRM integrations, and telephony systems. Proven track record leading engineering initiatives, deploying containerized Node.js and Python services on AWS, and integrating enterprise ecosystems (Salesforce, Vicidial, custom REST APIs). Passionate about leveraging modern AI-assisted engineering workflows to build scalable, business-critical software solutions.
+          </p>
+        </header>
 
-        <article class="job">
-          <div class="job-header">
-            <div><span class="company">IE Soluciones</span> – Culiacan, Sin, MX</div>
-            <div class="date">Jan 2010 – Nov 2012</div>
-          </div>
-          <div class="role">PHP Developer</div>
-          <ul>
-            <li><strong>Feature Development:</strong> Developed backend business logic, database queries, and custom features in PHP and MySQL for client-facing web applications.</li>
-            <li><strong>Collaborative Engineering:</strong> Collaborated with lead developers in version-controlled workflows, writing modular, maintainable, and well-documented code.</li>
-          </ul>
-        </article>
-      </section>
+        <section>
+          <h2 class="section-title">Professional Experience</h2>
 
-      <section>
-        <h2 class="section-title">Technical Skills</h2>
-        <div class="skills-grid" role="list">
-          <div class="skill-category" role="listitem" aria-label="Languages and Frameworks">
-            <div class="category-title">Languages &amp; Frameworks</div>
-            <div class="skill-list">
-              <span class="skill">Node.js</span>
-              <span class="skill">Python</span>
-              <span class="skill">JavaScript</span>
-              <span class="skill">Vue.js</span>
-              <span class="skill">React</span>
-              <span class="skill">PHP</span>
-              <span class="skill">CodeIgniter</span>
-              <span class="skill">HTML5/CSS3</span>
+          <article class="job">
+            <div class="job-header">
+              <div><span class="company">Cardiff</span> – Remote</div>
+              <div class="date">Aug 2018 – Present</div>
+            </div>
+            <div class="role">Remote Full-Stack &amp; Cloud Developer</div>
+            <ul>
+              <li><strong>Internal Tools &amp; Dashboards:</strong> Engineered dynamic web applications, interactive onboarding forms, and real-time reporting dashboards using React and Vue.js, optimizing user workflows and accelerating data processing.</li>
+              <li><strong>Cloud Microservices &amp; Pipelines:</strong> Containerized and deployed Node.js and Python microservices on AWS ECS with Amazon S3 integration, establishing secure automated ETL data ingestion pipelines.</li>
+              <li><strong>Salesforce &amp; CRM Integration:</strong> Architected custom Apex REST APIs and bi-directional synchronization pipelines connecting Salesforce CRM data seamlessly with internal microservices in real time.</li>
+              <li><strong>AI &amp; Modern Tooling:</strong> Integrated AI-assisted coding tools and modern engineering practices into daily workflows to streamline feature prototyping, optimize complex integrations, and accelerate debugging cycles.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <div class="job-header">
+              <div><span class="company">ABC Aida</span> – Tijuana, BC, MX</div>
+              <div class="date">Jan 2015 – Dec 2017</div>
+            </div>
+            <div class="role">Engineering Manager</div>
+            <ul>
+              <li><strong>Engineering Leadership:</strong> Led the engineering and IT staff in architecting, developing, and deploying cloud-hosted business applications, establishing coding standards and GitLab code review processes.</li>
+              <li><strong>Telephony &amp; CRM Integration:</strong> Architected full-stack CRM and telecommunications solutions, integrating Vicidial with custom CRM platforms, webphone capabilities, and automated marketing workflows.</li>
+              <li><strong>Cloud Infrastructure &amp; Reliability:</strong> Configured, secured, and maintained Linux (CentOS/LAMP) cloud servers, implementing deployment automation and robust disaster recovery strategies.</li>
+              <li><strong>Stakeholder Collaboration:</strong> Partnered directly with executive leadership to evaluate system requirements, plan architectural roadmaps, and implement emerging technologies.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <div class="job-header">
+              <div><span class="company">IE Soluciones</span> – Culiacan, Sin, MX</div>
+              <div class="date">Dec 2012 – Dec 2014</div>
+            </div>
+            <div class="role">IT Coordinator</div>
+            <ul>
+              <li><strong>Agile Project Delivery:</strong> Served as Scrum Master directing agile development cycles, translating client requirements into technical specifications, accurate project estimates, and milestone deliveries.</li>
+              <li><strong>Team Supervision &amp; Quality:</strong> Supervised engineering teams across multi-client software projects, enforcing code quality via repository reviews and ensuring timely delivery.</li>
+              <li><strong>Systems Deployment:</strong> Deployed and maintained cloud server environments (CentOS/LAMP) supporting scalable client web applications.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <div class="job-header">
+              <div><span class="company">IE Soluciones</span> – Culiacan, Sin, MX</div>
+              <div class="date">Jan 2010 – Nov 2012</div>
+            </div>
+            <div class="role">PHP Developer</div>
+            <ul>
+              <li><strong>Feature Development:</strong> Developed backend business logic, database queries, and custom features in PHP and MySQL for client-facing web applications.</li>
+              <li><strong>Collaborative Engineering:</strong> Collaborated with lead developers in version-controlled workflows, writing modular, maintainable, and well-documented code.</li>
+            </ul>
+          </article>
+        </section>
+
+        <section>
+          <h2 class="section-title">Technical Skills</h2>
+          <div class="skills-grid" role="list">
+            <div class="skill-category" role="listitem">
+              <div class="category-title">Languages &amp; Frameworks</div>
+              <div class="skill-list">
+                <span class="skill">Node.js</span>
+                <span class="skill">Python</span>
+                <span class="skill">JavaScript (ES6+)</span>
+                <span class="skill">TypeScript</span>
+                <span class="skill">Vue.js</span>
+                <span class="skill">React</span>
+                <span class="skill">PHP</span>
+                <span class="skill">CodeIgniter</span>
+                <span class="skill">HTML5/CSS3</span>
+              </div>
+            </div>
+
+            <div class="skill-category" role="listitem">
+              <div class="category-title">Cloud &amp; DevOps</div>
+              <div class="skill-list">
+                <span class="skill">AWS (ECS, S3, EC2)</span>
+                <span class="skill">Docker</span>
+                <span class="skill">Linux (CentOS/Ubuntu)</span>
+                <span class="skill">Apache</span>
+                <span class="skill">Git</span>
+                <span class="skill">GitLab</span>
+                <span class="skill">Bitbucket</span>
+                <span class="skill">CI/CD</span>
+              </div>
+            </div>
+
+            <div class="skill-category" role="listitem">
+              <div class="category-title">Salesforce Platform</div>
+              <div class="skill-list">
+                <span class="skill">Apex</span>
+                <span class="skill">Custom REST APIs</span>
+                <span class="skill">Flows</span>
+                <span class="skill">Custom Objects</span>
+                <span class="skill">Permissions &amp; Security</span>
+                <span class="skill">Page Layouts</span>
+              </div>
+            </div>
+
+            <div class="skill-category" role="listitem">
+              <div class="category-title">Databases &amp; Protocols</div>
+              <div class="skill-list">
+                <span class="skill">MySQL</span>
+                <span class="skill">Relational Schema Design</span>
+                <span class="skill">REST APIs</span>
+                <span class="skill">JSON</span>
+                <span class="skill">XML</span>
+                <span class="skill">WebSockets</span>
+              </div>
+            </div>
+
+            <div class="skill-category" role="listitem">
+              <div class="category-title">VoIP &amp; Telephony</div>
+              <div class="skill-list">
+                <span class="skill">WebRTC</span>
+                <span class="skill">FreeSWITCH</span>
+                <span class="skill">Twilio</span>
+                <span class="skill">Asterisk</span>
+                <span class="skill">Vicidial</span>
+              </div>
+            </div>
+
+            <div class="skill-category" role="listitem">
+              <div class="category-title">AI &amp; Methodologies</div>
+              <div class="skill-list">
+                <span class="skill">AI-Assisted Development</span>
+                <span class="skill">Software Architecture</span>
+                <span class="skill">Agile / Scrum (Scrum Master)</span>
+              </div>
             </div>
           </div>
+        </section>
 
-          <div class="skill-category" role="listitem" aria-label="Cloud and DevOps">
-            <div class="category-title">Cloud &amp; DevOps</div>
-            <div class="skill-list">
-              <span class="skill">AWS (ECS, S3)</span>
-              <span class="skill">Linux (CentOS)</span>
-              <span class="skill">Apache</span>
-              <span class="skill">Docker</span>
-              <span class="skill">Git</span>
-              <span class="skill">GitLab</span>
-              <span class="skill">Bitbucket</span>
-            </div>
+        <section>
+          <h2 class="section-title">Education</h2>
+          <div class="education-item">
+            <strong>Universidad Politécnica de Sinaloa</strong> – 2008<br />
+            Bachelor’s Degree – Information Technology Engineering
           </div>
+        </section>
 
-          <div class="skill-category" role="listitem" aria-label="Salesforce platform skills">
-            <div class="category-title">Salesforce Platform</div>
-            <div class="skill-list">
-              <span class="skill">Apex</span>
-              <span class="skill">Custom REST APIs</span>
-              <span class="skill">Flows</span>
-              <span class="skill">Custom Objects</span>
-              <span class="skill">Permissions &amp; Security</span>
-              <span class="skill">Page Layouts</span>
-            </div>
+        <section>
+          <h2 class="section-title">Links &amp; Profiles</h2>
+          <div class="contact-bar" role="list" aria-label="Social and Portfolio Links">
+            <a class="contact-pill" href="https://github.com/josetiznado/" target="_blank" rel="noopener noreferrer" role="listitem">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+              github.com/josetiznado
+            </a>
+            <a class="contact-pill" href="https://www.linkedin.com/in/josetiznado/" target="_blank" rel="noopener noreferrer" role="listitem">
+              <svg viewBox="0 0 24 24">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+              </svg>
+              linkedin.com/in/josetiznado
+            </a>
+            <a class="contact-pill" href="https://www.credly.com/users/jose-tiznado.cfe8d75f" target="_blank" rel="noopener noreferrer" role="listitem">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+              </svg>
+              credly.com/users/jose-tiznado
+            </a>
+            <a class="contact-pill" href="https://x.com/JETiznado" target="_blank" rel="noopener noreferrer" role="listitem">
+              <svg viewBox="0 0 24 24">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+              x.com/JETiznado
+            </a>
           </div>
+        </section>
+      </main>
+    </div>
 
-          <div class="skill-category" role="listitem" aria-label="Databases and Protocols">
-            <div class="category-title">Databases &amp; Protocols</div>
-            <div class="skill-list">
-              <span class="skill">MySQL</span>
-              <span class="skill">REST APIs</span>
-              <span class="skill">JSON</span>
-              <span class="skill">XML</span>
-              <span class="skill">WebSockets</span>
-            </div>
-          </div>
+    <script>
+      // Dark / Light Mode Toggle logic
+      const themeToggle = document.getElementById("themeToggle");
+      const root = document.documentElement;
 
-          <div class="skill-category" role="listitem" aria-label="VoIP and Telecom">
-            <div class="category-title">VoIP &amp; Telecom</div>
-            <div class="skill-list">
-              <span class="skill">FreeSWITCH</span>
-              <span class="skill">Twilio</span>
-              <span class="skill">Asterisk</span>
-              <span class="skill">Vicidial</span>
-            </div>
-          </div>
+      function getPreferredTheme() {
+        const saved = localStorage.getItem("theme");
+        if (saved) return saved;
+        return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
 
-          <div class="skill-category" role="listitem" aria-label="AI and methodologies">
-            <div class="category-title">AI &amp; Methodologies</div>
-            <div class="skill-list">
-              <span class="skill">AI Coding Agents</span>
-              <span class="skill">Software Architecture</span>
-              <span class="skill">Agile/Scrum</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      function setTheme(theme) {
+        root.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+      }
 
-      <section>
-        <h2 class="section-title">Education</h2>
-        <p>
-          <strong>Universidad Politécnica de Sinaloa</strong> – 2008<br />
-          Bachelor’s Degree – Information Technology Eng.
-        </p>
-      </section>
+      themeToggle.addEventListener("click", () => {
+        const currentTheme = root.getAttribute("data-theme") || getPreferredTheme();
+        const nextTheme = currentTheme === "dark" ? "light" : "dark";
+        setTheme(nextTheme);
+      });
 
-      <section>
-        <h2 class="section-title">Links</h2>
-        <p>
-          <a href="https://github.com/josetiznado/">GitHub</a><br />
-          <a href="https://www.linkedin.com/in/josetiznado/">LinkedIn</a>
-        </p>
-      </section>
-    </main>
+      // Initialize theme
+      setTheme(getPreferredTheme());
+    </script>
   </body>
 </html>

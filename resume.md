@@ -1,6 +1,6 @@
 # Jose Tiznado
 **Senior Software Engineer | Full-Stack & Cloud Developer**  
-[GitHub](https://github.com/josetiznado/) | [LinkedIn](https://www.linkedin.com/in/josetiznado/)
+[GitHub](https://github.com/josetiznado/) | [LinkedIn](https://www.linkedin.com/in/josetiznado/) | [Credly Badges](https://www.credly.com/users/jose-tiznado.cfe8d75f) | [X / Twitter](https://x.com/JETiznado)
 
 ---
 
@@ -57,7 +57,9 @@ Bachelor’s Degree – Information Technology Engineering
 
 ---
 
-## Links
+## Links & Profiles
 
-- **GitHub:** [github.com/josetiznado](https://github.com/josetiznado/)
-- **LinkedIn:** [linkedin.com/in/josetiznado](https://www.linkedin.com/in/josetiznado/)
+- 🐙 **GitHub:** [github.com/josetiznado](https://github.com/josetiznado/)
+- 💼 **LinkedIn:** [linkedin.com/in/josetiznado](https://www.linkedin.com/in/josetiznado/)
+- 📜 **Credly (Certifications):** [credly.com/users/jose-tiznado](https://www.credly.com/users/jose-tiznado.cfe8d75f)
+- 𝕏 **X (Twitter):** [x.com/JETiznado](https://x.com/JETiznado)
